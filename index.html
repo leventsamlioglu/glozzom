@@ -211,6 +211,48 @@
       </div>
     </section>
 
+    <!-- VIDEO PLAY -->
+    <section id="videoPlay">
+      <div class="dark-overlay">
+        <div class="row">
+          <div class="col">
+            <div class="container p-5">
+              <a
+                href="#"
+                class="video"
+                data-bs-video="https://www.youtube.com/embed/0ZiEwDJMxjs"
+                data-bs-toggle="modal"
+                data-bs-target="#videoModal"
+              >
+                <i class="bi bi-play-fill"></i>
+              </a>
+              <h1>See What We Do</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO MODAL -->
+    <div class="modal fade" id="videoModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button class="close" data-bs-dismiss="modal">
+              <span>&times;</span>
+            </button>
+            <iframe
+              src=""
+              frameborder="0"
+              height="350"
+              width="100%"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- JQuery (For getting year)-->
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -241,6 +283,22 @@
       $(".carousel").carousel({
         interval: 6000,
         pause: "hover",
+      });
+
+      // Video Play
+      $(function () {
+        // Auto play modal video
+        $(".video").click(function () {
+          var theModal = $(this).data("target"),
+            videoSRC = $(this).attr("data-video"),
+            videoSRCauto =
+              videoSRC +
+              "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+          $(theModal + " iframe").attr("src", videoSRCauto);
+          $(theModal + " button.close").click(function () {
+            $(theModal + " iframe").attr("src", videoSRC);
+          });
+        });
       });
     </script>
   </body>

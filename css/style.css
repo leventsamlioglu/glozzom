@@ -51,6 +51,21 @@ body {
   background: rgba(0, 0, 0, 0.7);
 }
 
-#home-icons .bi {
+.bi {
   font-size: 3rem;
+}
+
+#videoPlay {
+  position: relative;
+  min-height: 200px;
+  background: url("/img/media.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 0 -300px;
+  text-align: center;
+  color: #fff;
+}
+
+#videoPlay a {
+  color: #fff;
 }
