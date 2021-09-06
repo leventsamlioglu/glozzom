@@ -32,6 +32,113 @@
     <title>Bootstrap Theme</title>
   </head>
   <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">Glozzom</a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item active">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="services.html" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="blog.html" class="nav-link">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SHOWCASE SLIDER -->
+    <section id="showcase">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="0"
+            class="active"
+          ></li>
+          <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+          <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item carousel-image-1 active">
+            <div class="container">
+              <div class="carousel-caption d-none d-sm-block text-end mb-5">
+                <h1 class="display-3">Heading One</h1>
+                <p class="lead">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+                  aperiam vel ullam deleniti reiciendis ratione quod aliquid
+                  inventore vero perspiciatis.
+                </p>
+                <a href="#" class="btn btn-danger btn-lg">Sign Up Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item carousel-image-2">
+            <div class="container">
+              <div class="carousel-caption d-none d-sm-block mb-5">
+                <h1 class="display-3">Heading Two</h1>
+                <p class="lead">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+                  aperiam vel ullam deleniti reiciendis ratione quod aliquid
+                  inventore vero perspiciatis.
+                </p>
+                <a href="#" class="btn btn-primary btn-lg">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item carousel-image-3">
+            <div class="container">
+              <div class="carousel-caption d-none d-sm-block text-start mb-5">
+                <h1 class="display-3">Heading Three</h1>
+                <p class="lead">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+                  aperiam vel ullam deleniti reiciendis ratione quod aliquid
+                  inventore vero perspiciatis.
+                </p>
+                <a href="#" class="btn btn-success btn-lg">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a
+          href="#myCarousel"
+          data-bs-slide="prev"
+          class="carousel-control-prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+
+        <a
+          href="#myCarousel"
+          data-bs-slide="next"
+          class="carousel-control-next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </section>
+
     <!-- JQuery (For getting year)-->
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
