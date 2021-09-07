@@ -122,6 +122,15 @@
               blanditiis similique praesentium temporibus adipisci debitis
               labore!
             </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
+              fuga eaque. Amet, assumenda aliquid tempore dolorum error eveniet
+              doloribus sed repellat quod, dolores fuga ipsam soluta. Aliquam
+              accusantium pariatur aut sint deleniti laborum ducimus voluptatem?
+              Architecto cumque quod suscipit officiis soluta, voluptate dicta
+              blanditiis similique praesentium temporibus adipisci debitis
+              labore!
+            </p>
           </div>
           <div class="col-md-6">
             <img
@@ -133,6 +142,137 @@
         </div>
       </div>
     </section>
+
+    <!-- ICON BOXES -->
+    <section id="icon-boxes" class="p-5">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <div class="card bg-danger text-white text-center">
+              <div class="card-body">
+                <i class="bi bi-building"></i>
+                <h3>Sample Heading</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestias, adipisci.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark text-white text-center">
+              <div class="card-body">
+                <i class="bi bi-trophy"></i>
+                <h3>Sample Heading</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestias, adipisci.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-danger text-white text-center">
+              <div class="card-body">
+                <i class="bi bi-gift"></i>
+                <h3>Sample Heading</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestias, adipisci.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <div class="card bg-dark text-white text-center">
+              <div class="card-body">
+                <i class="bi bi-box-seam"></i>
+                <h3>Sample Heading</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestias, adipisci.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-danger text-white text-center">
+              <div class="card-body">
+                <i class="bi bi-credit-card"></i>
+                <h3>Sample Heading</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestias, adipisci.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark text-white text-center">
+              <div class="card-body">
+                <i class="bi bi-cup"></i>
+                <h3>Sample Heading</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestias, adipisci.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="p-4 bg-dark text-white">
+      <div class="container">
+        <h2 class="text-center">testimonials</h2>
+        <div class="row text-center">
+          <div class="col">
+            <div class="slider">
+              <div>
+                <blockquote class="blockquote">
+                  <p class="mb-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fugit, quaerat.
+                  </p>
+                  <footer class="blockquote-footer">
+                    John Doe From
+                    <cite title="Company 1">Company 1</cite>
+                  </footer>
+                </blockquote>
+              </div>
+              <div>
+                <blockquote class="blockquote">
+                  <p class="mb-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fugit, quaerat.
+                  </p>
+                  <footer class="blockquote-footer">
+                    Sam Smith From
+                    <cite title="Company 2">Company 2</cite>
+                  </footer>
+                </blockquote>
+              </div>
+              <div>
+                <blockquote class="blockquote">
+                  <p class="mb-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fugit, quaerat.
+                  </p>
+                  <footer class="blockquote-footer">
+                    Meghan Williams From
+                    <cite title="Company 3">Company 3</cite>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="main-footer" class="text-center p-4">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p>Copyright &copy; <span id="year"></span> Glozzom</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- JQuery (For getting year)-->
     <script
@@ -167,6 +307,13 @@
       // Get the current year for the copyright
 
       $("#year").text(new Date().getFullYear());
+
+      // Testimonials Slider
+      $(".slider").slick({
+        infinite: true,
+        slideToShow: 1,
+        slideToScroll: 1,
+      });
     </script>
   </body>
 </html>
