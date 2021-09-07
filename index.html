@@ -241,111 +241,92 @@
 
     <!-- PHOTO GALLERY -->
     <section id="gallery" class="py-5">
-      <div class="container lightbox">
+      <div class="container">
         <h1 class="text-center">Photo Gallery</h1>
         <p class="text-center">Check out our photos</p>
         <div class="row mb-4">
           <div class="col-md-4">
-            <a
-              href="https://source.unsplash.com/random/560x560"
-              data-bs-toggle="lightbox"
-              data-bs-gallery="img-gallery"
-              data-bs-height="560"
-              data-bs-width="560"
-            >
-              <img
-                src="https://source.unsplash.com/random/560x560"
-                data-mdb-img="https://source.unsplash.com/random/560x560"
-                alt=""
-                class="img-fluid"
-              />
-            </a>
+            <img
+              src="https://source.unsplash.com/random/560x560"
+              alt=""
+              class="gallery-item img-fluid"
+            />
           </div>
 
           <div class="col-md-4">
-            <a
-              href="https://source.unsplash.com/random/561x561"
-              data-bs-toggle="lightbox"
-              data-bs-gallery="img-gallery"
-              data-bs-height="561"
-              data-bs-width="561"
-            >
-              <img
-                src="https://source.unsplash.com/random/561x561"
-                alt=""
-                class="img-fluid"
-              />
-            </a>
+            <img
+              src="https://source.unsplash.com/random/561x561"
+              alt=""
+              class="gallery-item img-fluid"
+            />
           </div>
 
           <div class="col-md-4">
-            <a
-              href="https://source.unsplash.com/random/562x562"
-              data-bs-toggle="lightbox"
-              data-bs-gallery="img-gallery"
-              data-bs-height="562"
-              data-bs-width="562"
-            >
-              <img
-                src="https://source.unsplash.com/random/562x562"
-                alt=""
-                class="img-fluid"
-              />
-            </a>
+            <img
+              src="https://source.unsplash.com/random/562x562"
+              alt=""
+              class="gallery-item img-fluid"
+            />
           </div>
         </div>
 
         <div class="row mb-4">
           <div class="col-md-4">
-            <a
-              href="https://source.unsplash.com/random/563x563"
-              data-bs-toggle="lightbox"
-              data-bs-gallery="img-gallery"
-              data-bs-height="563"
-              data-bs-width="563"
-            >
-              <img
-                src="https://source.unsplash.com/random/563x563"
-                alt=""
-                class="img-fluid"
-              />
-            </a>
+            <img
+              src="https://source.unsplash.com/random/563x563"
+              alt=""
+              class="gallery-item img-fluid"
+            />
           </div>
 
           <div class="col-md-4">
-            <a
-              href="https://source.unsplash.com/random/564x564"
-              data-bs-toggle="lightbox"
-              data-bs-gallery="img-gallery"
-              data-bs-height="564"
-              data-bs-width="564"
-            >
-              <img
-                src="https://source.unsplash.com/random/564x564"
-                alt=""
-                class="img-fluid"
-              />
-            </a>
+            <img
+              src="https://source.unsplash.com/random/564x564"
+              alt=""
+              class="gallery-item img-fluid"
+            />
           </div>
 
           <div class="col-md-4">
-            <a
-              href="https://source.unsplash.com/random/565x565"
-              data-bs-toggle="lightbox"
-              data-bs-gallery="img-gallery"
-              data-bs-height="565"
-              data-bs-width="565"
-            >
-              <img
-                src="https://source.unsplash.com/random/565x565"
-                alt=""
-                class="img-fluid"
-              />
-            </a>
+            <img
+              src="https://source.unsplash.com/random/565x565"
+              alt=""
+              class="gallery-item img-fluid"
+            />
           </div>
         </div>
       </div>
     </section>
+
+    <!--Gallery Modal -->
+    <div
+      class="modal fade"
+      id="gallery-popup"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="https://source.unsplash.com/random/560x560"
+              class="modal-img"
+              alt="Modal Image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- NEWSLETTER -->
     <section id="newsletter" class="text-center p-5 bg-dark text-white">
@@ -435,6 +416,19 @@
       // Get the current year for the copyright
 
       $("#year").text(new Date().getFullYear());
+
+      // Gallery Modal
+
+      document.addEventListener("click", function (e) {
+        if (e.target.classList.contains("gallery-item")) {
+          const src = e.target.getAttribute("src");
+          document.querySelector(".modal-img").src = src;
+          const myModal = new bootstrap.Modal(
+            document.getElementById("gallery-popup")
+          );
+          myModal.show();
+        }
+      });
 
       // // Video Play
       $(function () {
